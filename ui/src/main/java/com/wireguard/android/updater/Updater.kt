@@ -221,6 +221,8 @@ object Updater {
     }
 
     private fun checkForUpdates(): Update? {
+        return null
+
         val connection = URL(UPDATE_URL_FMT.format(LATEST_FILE)).openConnection() as HttpURLConnection
         connection.setRequestProperty("User-Agent", Application.USER_AGENT)
         connection.connect()
